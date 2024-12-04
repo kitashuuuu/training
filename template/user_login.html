@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筋トレアプリ - ログイン</title>
+    <link rel="stylesheet" href="/CSS/user_login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>筋トレアプリ</h1>
+        <p class="subtitle">最強の体を手に入れろ🔥</p>
+        <div class="login-box">
+            <h2>ログイン画面</h2>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id" placeholder="ユーザーIDを入力">
+                </div>
+                <div class="form-group">
+                    <label for="pw">PW</label>
+                    <input type="password" id="pw" name="pw" placeholder="パスワードを入力">
+                </div>
+                <button type="submit" class="login-button">ログイン</button>
+            </form>
+            <a href="/template/user_account registar.html" class="register-link">新規登録</a>
+        </div>
+    </div>
+</body>
+</html>

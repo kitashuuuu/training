@@ -1,0 +1,25 @@
+nav {
+    background-color: black;
+    width: 200px; /* メニューバーの幅 */
+    height: 100vh; /* 画面の高さを占める */
+    position: fixed; /* 画面に固定 */
+    top: 0;
+    left: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav li a {
+    color: white;
+    text-decoration: none;
+  }

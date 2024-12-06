@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  
+  .menu-button {
+    font-size: 20px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .main-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .goal-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .examples {
+    text-align: center; /* リスト全体を中央揃え */
+    margin: 20px 0; /* 上下の余白を設定 */
+    font-size: 14px; /* テキストサイズ */
+    list-style: none; /* デフォルトのリストマークを削除 */
+    padding: 0;
+  }
+  
+  .examples li {
+    margin-bottom: 5px; /* 項目間の余白を設定 */
+    display: inline-block; /* リスト項目をインラインブロックに変更 */
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+/* ボタンを囲む親要素のスタイル */
+.button-container {
+  text-align: center; /* ボタン全体を中央揃え */
+  margin-top: 20px; /* 上下の余白を設定 */
+}
+
+/* 各ボタンのスタイル */
+button {
+  background-color: #f2f2f2; /* ボタンの背景色 */
+  color: black; /* テキストの色 */
+  border: none; /* 枠線を削除 */
+  padding: 10px 20px; /* 内側の余白 */
+  margin: 0 10px; /* ボタン間の横の余白 */
+  border-radius: 5px; /* 角を丸める */
+  font-size: 16px; /* フォントサイズ */
+  cursor: pointer; /* カーソルをポインターに変更 */
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+button:hover {
+  background-color: #dcdcdc; /* ホバー時の背景色 */
+}
+
+  
+  .back {
+    background-color: #cccccc;
+    color: #000000;
+  }
+  
+  .submit {
+    background-color: #00bfff;
+    color: #ffffff;
+  }

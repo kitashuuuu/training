@@ -1,0 +1,144 @@
+/* ベース設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* ヘッダー */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 26px;
+    margin: auto;
+    padding: auto;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* メインコンテンツ */
+  .top-content {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-left: 410px;
+    margin-top: 10px;
+  }
+  
+  .fire-icon {
+    color: red;
+  }
+  
+  .goal-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  h3 {
+    margin: 20px 0 10px;
+    font-size: 16px;
+  }
+  
+  .plan-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .plan-input {
+    width: 45%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* ボタン */
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #0056b3;
+  }
+  .container {
+    max-width: 70%; 
+    margin: 0 auto; 
+  }  
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+    /* padding-left: 70px;
+    padding-right: 70px; */
+  }
+  
+  .custom-underline::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px; /* テキストの下に位置調整 */
+    width: 510%;
+    height: 2px; /* 下線の太さ */
+    background-color: green; /* 下線の色 */
+    padding-right: 40px;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  .horizontal-container {
+    display: flex; /* 横並びにする */
+    gap: 10px;     /* 各要素間のスペース */
+  }
+  
+
+  

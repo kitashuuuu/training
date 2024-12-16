@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポップアップ表示</title>
+  <link rel="stylesheet" href="/src/main/resources/static/CSS/pop.css">
+</head>
+<body>
+  <button id="openPopup">ポップアップを開く</button>
+
+  <!-- ポップアップの構造 -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-button">&times;</span>
+      <h2>ログアウト</h2>
+      <p>ログアウトしますか？</p>
+      <button class="btn-back">キャンセル</button>
+      <button class="btn-submit">ログアウト</button>
+    </div>
+  </div>
+
+  <script src="/src/main/resources/static/js/pop.js"></script>
+</body>
+</html>

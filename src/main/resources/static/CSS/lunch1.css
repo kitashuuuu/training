@@ -41,9 +41,8 @@ body {
   
   .meal-section {
     margin: 0 auto;
-    width: 80%;
-    max-width: 600px;
-    background-color: white;
+    width: 90%;
+    max-width: 700px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -61,9 +60,9 @@ body {
   }
   
   .content img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+
   }
   
   table {
@@ -83,16 +82,39 @@ body {
   
   .back-button {
     display: block;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     padding: 10px 20px;
     background-color: gray;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
   }
   
   .back-button:hover {
     background-color: darkgray;
   }
+  .date-section {
+    display: flex; /* フレックスボックスを有効化 */
+    align-items: center; /* 垂直方向の中央揃え */
+    gap: 10px; /* 要素間の間隔 */
+    margin-left: 600px;
+  }
   
+  /* 日付とセレクトボックスの間隔を調整 */
+  .date-section p {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .date-section select {
+    padding: 5px; /* プルダウンメニューの見た目を調整 */
+  }
+  h2{
+    margin-right: 400px;
+  }
+  nav{
+    font-size: 16px;
+  }

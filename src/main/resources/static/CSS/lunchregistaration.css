@@ -1,0 +1,173 @@
+* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .date-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+ /* 食事情報セクション */
+.meal-section {
+    padding: 40px;
+    margin-left: 70px;
+  }
+  
+  .meal-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #010913;
+    margin-right: 680px;
+  }
+  
+  .meal-content {
+    display: flex;
+    flex-wrap: wrap; /* レスポンシブ対応で折り返し可能に */
+    justify-content: space-between;
+    gap: 70px; /* カード間の余白 */
+    width: 900px;
+    margin-left: 90px;
+  }
+  
+  /* アップロードエリア */
+.file-upload {
+  flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc; /* アップロード用の枠 */
+    height: 240px;
+    width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    
+  }
+  
+  .file-upload:hover {
+    background-color: #eef;
+    cursor: pointer;
+  }
+  
+  .file-upload input {
+    display: none;
+  }
+  
+  .file-upload label {
+    cursor: pointer;
+  }
+  
+  /* 食事の詳細 */
+  .meal-details {
+    flex: 1;
+  }
+  
+  .meal-details table {
+    width: 500px;
+    height: 240px;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-style: solid;
+  }
+  
+  .meal-details th,
+  .meal-details td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .meal-details th {
+    background-color: #f9f9f9;
+    color: #666;
+  }
+  
+  /* ボタン */
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-left: 70px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .back-button {
+    background-color: #ccc;
+    color: #333;
+    margin-right: -70px;
+  }
+  
+  .register-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  .date-section {
+    display: flex; /* フレックスボックスを有効化 */
+    align-items: center; /* 垂直方向の中央揃え */
+    gap: 10px; /* 要素間の間隔 */
+    margin-left: 600px;
+  }
+  
+  /* 日付とセレクトボックスの間隔を調整 */
+  .date-section p {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .date-section select {
+    padding: 5px; /* プルダウンメニューの見た目を調整 */
+  }
+
+  nav{
+    font-size: 16px;
+  }

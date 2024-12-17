@@ -63,16 +63,16 @@ body {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    color: #fff;
+    color: #161515;
     background-color: #007bff;
-    border: none;
-    border-radius: 5px;
+    /* border: none; */
     cursor: pointer;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .register-button:hover {
-    background-color: #0056b3;
+    background-color: #7cb7f7;
 }
 
 /* 戻るリンク */

@@ -16,14 +16,27 @@
       <label for="cp_toggle04"><span></span></label>
       <div class="cp_menu">
       <ul>
-      <li><a href="#">menu1</a></li>
-      <li><a href="#">menu2</a></li>
-      <li><a href="#">menu3</a></li>
-      <li><a href="#">menu4</a></li>
-      <li><a href="#">menu5</a></li>
+      <li><a href="#">・TOP</a></li>
+      <li><a href="#">・アカウント編集</a></li>
+      <li><a href="#">・食事記録</a></li>
+      <li><a href="#">・トレログ</a></li>
+      <li><a href="#" id="openPopup">・ログアウト</a></li>
+
       </ul>
       </div>
     </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup" class="close-button">&times;</span>
+        <h5>ログアウト</h5>
+        <p>ログアウトしますか？</p>
+        <button class="btn-cancel">キャンセル</button>
+        <a href="/src/main/resources/template/user_login.html" class="btn-logout">ログアウト</a>        
+      
+      </div>
+    </div>
+  
+    <script src="/src/main/resources/static/js/pop.js"></script>
     <div class="cp_contents">
       <h1>食事記録一覧</h1>
       </div>

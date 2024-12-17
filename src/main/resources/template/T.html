@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トレログ</title>
+    <link rel="stylesheet" href="/src/main/resources/static/CSS/T.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="menu-icon">
+            <span>&#9776;</span> <!-- ハンバーガーメニュー -->
+        </div>
+        <h1>トレログ</h1>
+        <nav>
+            <button class="btn">登録</button>
+            <button class="btn">編集</button>
+        </nav>
+    </header>
+
+    <!-- カレンダー部分 -->
+    <main>
+        <div class="calendar">
+            <h2>October 2024</h2>
+            <table>
+                <tr>
+                    <th>SUN</th><th>MUN</th><th>TUE</th><th>WED</th>
+                    <th>THU</th><th>FRI</th><th>SAT</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td>1</td><td>2</td><td>3</td>
+                    <td class="active">4</td><td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+                    <td>11</td><td>12</td>
+                </tr>
+                <!-- カレンダー続き -->
+            </table>
+        </div>
+
+        <!-- 今日のトレーニング記録 -->
+        <section class="record">
+            <h3>今日のトレーニング記録</h3>
+            <div class="box">
+                ベンチプレス 70kg 10回<br>
+                デッドリフト 50kg 20回<br>
+                スクワット 50回<br>
+                腹筋 20回<br>
+                有酸素運動を1時間行った
+            </div>
+        </section>
+
+        <!-- 過去一週間の記録 -->
+        <section class="record">
+            <h3>過去一週間の記録</h3>
+            <div class="box">
+                腹筋: 30回<br>
+                腕立て伏せ: 100回<br>
+                ダンベル: 15kg 10回<br>
+                有酸素運動を1時間行った
+            </div>
+        </section>
+
+        <!-- 統計部分 -->
+        <section class="archive">
+            <div>
+                <h4>MONTHLY ARCHIVE</h4>
+                <p><strong>0</strong>days</p>
+            </div>
+            <div class="days-count">
+                <p>1days</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -20,11 +20,7 @@ body {
     font-size: 18px;
   }
   
-  .header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-  }
+
   
   .menu-button {
     background: none;
@@ -118,3 +114,78 @@ body {
   nav{
     font-size: 16px;
   }
+  #it{
+    color: #f9f9f9;
+    margin-left: 570px;
+  }
+  a{
+    color: #f9f9f9;
+  }
+  /* ハンバーガーメニュー */
+.cp_offcm04 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cp_offcm04 .cp_menu {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 250px;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.53s transform;
+  transition-timing-function: cubic-bezier(.38, .52, .23, .99);
+  background-color: rgb(15, 15, 15);
+  opacity: 0.8;
+}
+
+.cp_offcm04 .cp_menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.cp_offcm04 .cp_menu li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.cp_offcm04 #cp_toggle04 {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+.cp_offcm04 #cp_toggle04:checked ~ .cp_menu {
+  transform: translateX(100vw);
+}
+
+.cp_offcm04 #cp_toggle04 ~ label {
+  display: block;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: 0.5s transform;
+  transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
+  text-align: center;
+  color: #fffdfd;
+}
+
+.cp_offcm04 #cp_toggle04 ~ label::before {
+  font-family: 'FontAwesome';
+  content: '\f0c9'; /* ハンバーガーメニューアイコン */
+  font-size: 2em;
+}
+
+.cp_offcm04 #cp_toggle04:checked ~ label::before {
+  content: '\f00d'; /* 閉じるアイコン */
+}
+
+.cp_offcm04 #cp_toggle04:checked ~ label {
+  transform: translateX(250px);
+}

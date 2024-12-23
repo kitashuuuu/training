@@ -9,12 +9,18 @@
     <link rel="stylesheet" href="/src/main/resources/static/CSS/all.css" >
 </head>
 <body>
-  <header>
-        <div class="header-container">
-          <button class="menu-btn" onclick="location.href='/template/menu.html' " >☰</button>
-          <h1 id="title">トレーニング目標設定</h1>
-        </div>
-      </header>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close-button">&times;</span>
+      <h5>ログアウト</h5>
+      <p>ログアウトしますか？</p>
+      <button class="btn-cancel">キャンセル</button>
+      <a href="/src/main/resources/template/user_login.html" class="btn-logout">ログアウト</a>    
+     
+    
+    </div>
+     <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image">    
+  </div>
       <main class="main-content">
         <h2>最終的な目標を立てよう！</h2>
         <p class="arrow">↓</p>

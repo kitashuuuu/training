@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="/src/main/resources/static/CSS/all.css" >
 </head>
 <body>
-    <header>
-        <button id="menuButton" class="menu-button">☰</button>
-        <h1>トレーニングプラン設定</h1>
-    </header>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span id="closePopup" class="close-button">&times;</span>
+          <h5>ログアウト</h5>
+          <p>ログアウトしますか？</p>
+          <button class="btn-cancel">キャンセル</button>
+          <a href="/src/main/resources/template/user_login.html" class="btn-logout">ログアウト</a>    
+         
+        
+        </div>
+         <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image">    
+      </div>
     <main>
         <h2>今日の筋トレプランを設定しよう！</h2>
         <input type="text" placeholder="プランを入力">

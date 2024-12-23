@@ -56,7 +56,13 @@ body {
     margin-left: 360px;
     margin-top: 10px;
   }
-  
+   h3 {
+    margin: 20px 0 10px;
+    font-size: 16px;color: #333;
+  }.h5{
+    margin-top: 10px;
+
+  }
   .fire-icon {
     color: red;
   }
@@ -72,11 +78,7 @@ body {
     max-height: 70px;
   }
   
-  h3 {
-    margin: 20px 0 10px;
-    font-size: 16px;
-  }
-  
+ 
   /* .plan-container {
     display: flex;
     gap: 10px;
@@ -173,6 +175,88 @@ body {
   
   .title-image {
     width: 70px; /* 画像のサイズを調整 */
-    height: auto; /* アスペクト比を維持 */
+  }
+ 
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    height: 400px;
+    display: none;
+    flex-direction: column; /* 縦方向に要素を配置 */
+  align-items: center; /* 水平方向の中央揃え */
+  border-radius: 8px;
+  position: absolute;
+ 
+  border-radius: 8px;
+ 
+  width: 80%;
+  max-width: 400px;
+  height: 450px;
   }
   
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 20px;
+    top: 40%;
+    margin-bottom: 40px;
+  }
+.popup-content h5{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-size: 23px;
+}
+.popup-content p{
+ padding: 10px 10px 10px 10px ;
+ margin-bottom: 40px;
+  font-size: 20px;
+ 
+  border: solid 2px;
+}
+
+.close-btn:hover {
+  color: red;
+}
+/* キャンセルボタン */
+.btn-cancel {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* ログアウトリンクをボタン風にする */
+.btn-logout {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: aqua;
+  color: #333;
+  margin-left: 10px;
+}
+
+.btn-logout:hover {
+  background-color: #e0e0e0;
+}
+ .new-image{
+    width: 100px;
+    height: 140px;
+   margin-top: 20px;
+  }

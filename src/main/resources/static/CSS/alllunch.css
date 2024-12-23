@@ -7,21 +7,13 @@ body {
   color: #333;
 }
 
-/* ヘッダー */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #000;
-  color: #fff;
-  /* padding: 10px 20px; */
-}
+
 
  h1 {
   margin: 0;
   font-size: 17px;
   color: #fff;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 h2{
   color: #080808;
@@ -39,6 +31,7 @@ h2{
 /* メインコンテンツ */
 .content {
   padding: 20px;
+  margin-left: 570px;
 }
 #meal-type {
   color: #131010;
@@ -59,12 +52,16 @@ option{
 
 /* カロリーテーブル */
 .calorie-summary table {
-  width: 100%;
+  width: 40px;
   border-collapse: collapse;
   margin-bottom: 20px;
-width: 70px;
-margin-left: 540px;
+  margin-left: 570px;
 }
+.calorie-summary h2{
+  margin-left: 580px;
+  padding-bottom: 20px;
+}
+
 
 .calorie-summary th,
 .calorie-summary td {
@@ -117,7 +114,6 @@ margin-left: 540px;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-  margin-top: 12px;
 }
 ol, ul {
 	list-style: none;
@@ -209,4 +205,6 @@ a {
   display: block;
   padding: 0.5em;
 }
-
+.blue:hover{
+  color: aqua;
+}

@@ -1,0 +1,179 @@
+.meal-section {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .meal-section h2{
+    margin-bottom: 20px;
+  }
+  .file-upload-box {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+    background-color: #fff;
+  }
+  .img{
+    padding-top: 20px;
+  }
+  .content {
+    width: 40%;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+  }
+  table th {
+    background-color: #f0f0f0;
+  }
+  table td[contenteditable="true"] {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    cursor: text;
+  }
+  .btn-back, .btn-submit {
+    padding: 10px 20px;
+    background-color: #f0f3f0;
+    color: #1d1212;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  .btn-submit{
+    background-color: aqua;
+    margin-left: 50px;
+  }
+  p{
+      margin-right: 40px;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    height: 400px;
+    display: none;
+    flex-direction: column; /* 縦方向に要素を配置 */
+  align-items: center; /* 水平方向の中央揃え */
+  border-radius: 8px;
+  position: absolute;
+ 
+  border-radius: 8px;
+ 
+  width: 80%;
+  max-width: 400px;
+  height: 450px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 20px;
+    top: 40%;
+    margin-bottom: 40px;
+  }
+.popup-content h5{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-size: 23px;
+}
+.popup-content p{
+ padding: 10px 10px 10px 10px ;
+ margin-bottom: 40px;
+  font-size: 20px;
+ 
+  border: solid 2px;
+}
+
+.close-btn:hover {
+  color: red;
+}
+/* キャンセルボタン */
+.btn-cancel {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* ログアウトリンクをボタン風にする */
+.btn-logout {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: aqua;
+  color: #333;
+  margin-left: 10px;
+}
+
+.btn-logout:hover {
+  background-color: #e0e0e0;
+}
+.date-section {
+    display: flex; /* フレックスボックスを有効化 */
+    align-items: center; /* 垂直方向の中央揃え */
+    gap: 10px; /* 要素間の間隔 */
+    margin-left: 600px;
+    margin-bottom: 120px;
+  }
+  
+  /* 日付とセレクトボックスの間隔を調整 */
+  .date-section p {
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .date-section select {
+    padding: 5px; /* プルダウンメニューの見た目を調整 */
+  }
+ .new-image{
+    width: 100px;
+    height: 140px;
+   margin-top: 20px;
+  }
+  .cp_cont{
+    position: absolute; /* 固定配置 */
+    top: 0;             /* 最上部に配置 */
+    left: 0;            /* 左端に配置 */
+    width: 100%;        /* 横幅を画面いっぱいに */
+    text-align: center; /* コンテンツを中央揃え */
+    padding: 20px 0;    /* 上下の余白 */
+  }
+  .btn-back, .btn-submit {
+    padding: 10px 20px;
+    background-color: #f0f3f0;
+    color: #1d1212;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  .btn-submit{
+    background-color: aqua;
+    margin-left: 50px;
+  }

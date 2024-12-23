@@ -1,0 +1,128 @@
+/* 全体設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  /* メインセクション */
+  main {
+    text-align: center;
+  }
+  
+  /* 見出し */
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+.nav{
+    color: #f0f3f0;
+    display: flex;
+    justify-content: space-between;
+}
+  .date-section{
+    display: flex;
+    font-size: 20px;
+    margin-left: 350px;
+    margin-bottom: 90px;
+  }
+  /* ファイル選択ボックス */
+  .file-upload-box {
+    border: 1px solid #000;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+  }
+  
+  .file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .file-upload-input {
+    display: none;
+  }
+  
+  .file-upload-label i {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #888;
+    margin-left: 70px;
+  }
+  .cp_cont{
+    position: absolute; /* 固定配置 */
+    top: 0;             /* 最上部に配置 */
+    left: 0;            /* 左端に配置 */
+    width: 100%;        /* 横幅を画面いっぱいに */
+    text-align: center; /* コンテンツを中央揃え */
+    padding: 20px 0;    /* 上下の余白 */
+  }
+  .meal-section {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+     }
+     .meal-sectio{
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 27px;
+         }
+  .content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  .name{
+    display: flex;
+  }
+
+.btn-back, .btn-submit {
+  padding: 10px 20px;
+  background-color: #f0f3f0;
+  color: #1d1212;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.btn-submit{
+  background-color: aqua;
+  margin-left: 50px;
+}
+p{
+    margin-right: 40px;
+}

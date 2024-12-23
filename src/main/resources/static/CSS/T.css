@@ -1,104 +1,274 @@
-/* 全体リセット */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* 基本リセット */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-header {
+    background-color: #fff;
+  }
+  
+  /* ヘッダー部分
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #333;
     color: #fff;
     padding: 10px 20px;
-}
+  }
+  
+  .header-title {
+    margin: 0;
+  } */
+  
+  /* コンテナ */
+  .container {
+     display: flex;  
+    justify-content: space-around; /* 要素を等間隔に配置 */
+    align-items: flex-start; /* 上揃えにする */
+    padding: 20px;
+  }
+  
+  /* カレンダー部分 */
+  .calendar {
+    background: #fff;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    width: 460px;
+    height: 430px;
+  }
+  
+  .calendar h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
 
-.menu-icon span {
-    font-size: 24px;
-    cursor: pointer;
+  
+  /* トレーニング記録部分 */
+   .training-log {
+    /* background: #fff;*/
+    border: 1px solid #201f1f; 
+    /* border-radius: 8px; */
+    
+    padding: 20px;
+    width: 65%; /* 横幅を調整 */
+    margin-bottom: 30px;
 }
+  
+  .training-log h2, .training-log h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .training-log p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+  
 
-.btn {
-    margin-left: 10px;
-    background-color: #ddd;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-h1 {
+  .calendar {
+    /* background-color: #fff; */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 1.8em;
-}
-
-/* カレンダー */
-.calendar {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.calendar table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-.calendar th, .calendar td {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-
-.calendar .active {
+    margin-left: 70px;
+  }
+  
+  .calendar h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .days span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 0.9rem;
+  }
+  
+  .days .highlight {
     background-color: #000;
     color: #fff;
-    border-radius: 50%;
-}
-
-/* トレーニング記録 */
-.record {
-    margin: 20px;
-}
-
-.record h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.box {
-    border: 1px solid #000;
-    padding: 10px;
-    background-color: #fff;
-}
-
-/* 統計部分 */
-.archive {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-.archive h4 {
-    font-size: 1em;
     font-weight: bold;
-}
-
-.archive p {
-    font-size: 2em;
-    margin-top: 10px;
-}
-
-.days-count p {
-    background-color: #aaa;
-    padding: 5px 10px;
+  }
+  .days .sun{
+    color: aqua;
+    border: none;
+  }
+  .days .mun{
+    color: #333;
+    border: none;
+  }
+  .days .dus{
+    color: darkgray;
+    border: none;
+  }
+  .log{
+    /* display: flex; */
+    flex-direction: column; /* 子要素を縦並びにする */
+    margin-left: 70px;
+    gap: 20px;              /* カード間の余白 */
+  }
+  .log-box{
+    width: 900px;
+  }
+/* Monthly Archive セクション */
+.monthly-archive {
+    margin: 20px auto; /* カレンダーの直下に中央配置 */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .archive-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+    gap: 20px;
+    width: fit-content; /* 中央に寄せるためのサイズ調整 */
+  }
+  
+  .archive-left {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .archive-title {
+    margin: 0;
+    text-align: right;
+    color: #333;
+  }
+  
+  .archive-divider {
+    width: 1px;
+    background-color: #000;
+    height: 40px;
+  }
+  
+  .archive-center {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+  }
+  
+  .archive-days span {
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+  }
+  
+  .archive-right {
+    margin-left: auto;
+  }
+  
+  .btn-archive {
+    background-color: #6c5e5e;
     color: #fff;
-    border-radius: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-archive:hover {
+    background-color: #5a4d4d;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    height: 400px;
+    display: none;
+    text-align: center;
+    flex-direction: column; /* 縦方向に要素を配置 */
+   align-items: center; /* 水平方向の中央揃え */
+  border-radius: 8px;
+  position: absolute;
+ 
+  border-radius: 8px;
+ 
+  width: 80%;
+  max-width: 400px;
+  height: 450px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 20px;
+    top: 40%;
+    margin-bottom: 40px;
+  }
+.popup-content h5{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-size: 23px;
 }
+.popup-content p{
+ padding: 10px 10px 10px 10px ;
+ margin-bottom: 40px;
+  font-size: 20px;
+ 
+  border: solid 2px;
+}
+
+.close-btn:hover {
+  color: red;
+}
+/* キャンセルボタン */
+.btn-cancel {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* ログアウトリンクをボタン風にする */
+.btn-logout {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: aqua;
+  color: #333;
+  margin-left: 10px;
+}
+
+.btn-logout:hover {
+  background-color: #e0e0e0;
+}
+ .new-image{
+    width: 100px;
+    height: 140px;
+   margin-top: 20px;
+  }

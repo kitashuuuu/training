@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食事記録編集</title>
+  <link href="https://use.fontawesome.com/releases/v6.7.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/main/resources/static/CSS/lunchfetch.css">
+  <link rel="stylesheet" href="../static/CSS/all.css">
+</head>
+<body>
+<div class="cp_cont">
+    <!-- サイドメニュー -->
+    <div class="cp_offcm04">
+      <input type="checkbox" id="cp_toggle04">
+      <label for="cp_toggle04"><span></span></label>
+      <div class="cp_menu">
+        <ul>
+          <li><a href="../template/user_top.html">・TOP</a></li>
+          <li><a href="../template/">・アカウント編集</a></li>
+          <li><a href="../template/alllunch.html">・食事記録</a></li>
+          <li><a href="../template/T.html">・トレログ</a></li>
+          <li><a href="#" id="openPopup">ログアウト</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ログアウトのポップアップ -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup" class="close-button">&times;</span>
+        <h5>ログアウト</h5>
+        <p>ログアウトしますか？</p>
+        <button class="btn-cancel">キャンセル</button>
+        <a href="/src/main/resources/template/user_login.html" class="btn-logout">ログアウト</a>
+      </div>
+      <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image">
+    </div>
+
+    <script src="/src/main/resources/static/js/pop.js"></script>
+    <h1>食事記録編集</h1>
+
+    <main>
+        <section class="date-section">
+            <p>2024/09/14</p>
+            <select>
+              <option value="breakfast">朝食</option>
+              <option value="lunch" selected>昼食</option>
+              <option value="dinner">夕食</option>
+            </select>
+          </section>
+       <!-- セクション: 編集内容 -->
+    <section class="meal-section">
+        <!-- 左側: タイトルと画像 -->
+        <div class="file-upload-box">
+          <h2 contenteditable="true">ナスとレンコンと豚肉の甘酢炒め</h2>
+        <img src="../static/img/images (3).jpg" alt="ナスとレンコンと豚肉の甘酢炒め">
+         
+        </div>
+  
+        <!-- 右側: 編集可能なテーブル -->
+        <div class="content">
+          <table>
+            <tr>
+              <th>カロリー</th>
+              <td contenteditable="true">550kcal</td>
+            </tr>
+            <tr>
+              <th>オススメ度</th>
+              <td contenteditable="true">★★★★☆</td>
+            </tr>
+            <tr>
+              <th>材料</th>
+              <td contenteditable="true">
+                豚肉、ナス、レンコン、カボチャ<br>
+                サラダ油、片栗粉、いりごま、さとう、おろしにんにく<br>
+                おろししょうが、酢、砂糖
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <div class="button-group">
+        <button class="btn-back">戻る</button>
+        <button class="btn-submit">登録</button>
+    </div>   
+    </body>
+</html>

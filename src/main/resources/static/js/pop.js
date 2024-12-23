@@ -21,4 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  cancelButton.addEventListener("click", function() {
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  });
   

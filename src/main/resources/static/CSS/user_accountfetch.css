@@ -1,49 +1,55 @@
-.meal-section {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .meal-section h2{
-    margin-bottom: 20px;
-  }
-  .file-upload-box {
+/* 全体のリセット */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    width: 45%;
     align-items: center;
-    
+    justify-content: center;
+    height: 100vh;
   }
-  .file-upload-box .im{
-    width: 350px;
-    margin-top: 10px;
-    
+  
+ 
+  h1 {
+    margin: 0;
+    font-size: 18px;
   }
-  .content {
+  
+  .form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+
+  }
+  
+  label {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
     width: 40%;
-    height: 100px;
+    height: 50px;
+    padding: 8px;
+    font-size: 30px;
+    border: 1px solid rgb(115, 119, 119);
+    border-radius: 4px;
+    box-sizing: border-box;
   }
-  table {
-    width: 120%;
-    height: 300px;
-    border-collapse: collapse;
-  }
-  table th, table td {
-    text-align: left;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-  }
-  table th {
-    background-color: #f0f0f0;
-  }
-  table td[contenteditable="true"] {
-    background-color: #e8f5e9;
-    border: 1px solid #a5d6a7;
-    cursor: text;
-  }
-  p{
-      margin-right: 40px;
+  
+  .button-group {
+    justify-content: space-between;
+    margin-top: 20px;
   }
   .popup {
     position: fixed;
@@ -122,29 +128,7 @@
 .btn-logout:hover {
   background-color: #e0e0e0;
 }
-.date-section {
-    display: flex; /* フレックスボックスを有効化 */
-    align-items: center; /* 垂直方向の中央揃え */
-    gap: 10px; /* 要素間の間隔 */
-    margin-left: 600px;
-    margin-bottom: 120px;
-  }
-  
-  /* 日付とセレクトボックスの間隔を調整 */
-  .date-section p {
-    margin: 0;
-    margin-right: 10px;
-  }
-  
-  .date-section select {
-    padding: 5px; /* プルダウンメニューの見た目を調整 */
-  }
- .new-image{
-    width: 100px;
-    height: 140px;
-   margin-top: 20px;
-  }
-  .cp_cont{
+.cp_cont{
     position: absolute; /* 固定配置 */
     top: 0;             /* 最上部に配置 */
     left: 0;            /* 左端に配置 */

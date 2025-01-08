@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トレーニングログ登録</title>
+  <link href="https://use.fontawesome.com/releases/v6.7.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/CSS/all.css">
+  <link rel="stylesheet" href="../static/CSS/training.css">
+</head>
+<body>
+  <div class="header">
+    <button class="menu-btn">☰</button>
+    <h1>トレーニングログ登録</h1>
+    <button class="edit-btn">編集</button>
+  </div>
+
+ 
+  <div class="container">
+    <form>
+      <div class="date-section">
+        <label for="date">2024/09/14</label>
+        <img src="calendar-icon.png" alt="カレンダー" class="calendar-icon">
+      </div>
+
+      <div class="contai">
+        <!-- 1つ目 -->
+        <div class="form-item">
+          <div class="form-row">
+            <label for="weight1">1</label>
+            <input id="weight1" type="number" placeholder="重量">
+            <span class="unit">kg</span>
+            <input id="reps1" type="number" placeholder="回数">
+            <span class="unit">回</span>
+          </div>
+          <div class="form-row">
+            <select>
+              <option>ベンチプレス</option>
+              <option>デッドリフト</option>
+              <option>スクワット</option>
+            </select>
+          </div>
+        </div>
+    
+        <!-- 2つ目 -->
+        <div class="form-item">
+          <div class="form-row">
+            <label for="weight2">2</label>
+            <input id="weight2" type="number" placeholder="重量">
+            <span class="unit">kg</span>
+            <input id="reps2" type="number" placeholder="回数">
+            <span class="unit">回</span>
+          </div>
+          <div class="form-row">
+            <select>
+              <option>デッドリフト</option>
+              <option>ベンチプレス</option>
+              <option>スクワット</option>
+            </select>
+          </div>
+        </div>
+    
+        <!-- 3つ目 -->
+        <div class="form-item">
+          <div class="form-row">
+            <label for="weight3">3</label>
+            <input id="weight3" type="number" placeholder="重量">
+            <span class="unit">kg</span>
+            <input id="reps3" type="number" placeholder="回数">
+            <span class="unit">回</span>
+          </div>
+          <div class="form-row">
+            <select>
+              <option>スクワット</option>
+              <option>デッドリフト</option>
+              <option>ベンチプレス</option>
+            </select>
+          </div>
+        </div>
+    
+        <!-- 4つ目 -->
+        <div class="form-item">
+          <div class="form-row">
+            <label for="weight4">4</label>
+            <input id="weight4" type="number" placeholder="重量">
+            <span class="unit">kg</span>
+            <input id="reps4" type="number" placeholder="回数">
+            <span class="unit">回</span>
+          </div>
+          <div class="form-row">
+            <select>
+              <option>スクワット</option>
+              <option>ベンチプレス</option>
+              <option>デッドリフト</option>
+            </select>
+          </div>
+        </div>
+      <div class="add-entry">＋追加</div>
+
+      <textarea class="notes" placeholder="＊有酸素運動を一時間行った"></textarea>
+ </div>
+     
+    </form>
+  <div class="button-group">
+        <button type="button" class="back-btn">戻る</button>
+        <button type="submit" class="submit-btn">登録</button>
+      </div>
+</body>
+</html>

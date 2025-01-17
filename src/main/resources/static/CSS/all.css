@@ -214,7 +214,7 @@ a {
 .cp_offcm04 #cp_toggle04 ~ label::before {
 	font-family: 'FontAwesome';
 	content: '\f0c9';
-	font-size: 2em
+	font-size: 30px
 }
 .cp_offcm04 #cp_toggle04:checked ~ label::before {
 	content: '\f00d';
@@ -227,4 +227,8 @@ a {
 .cp_offcm04 #cp_toggle04 ~ label {
   display: block;
   padding: 0.5em;
+}
+.new-image{
+	margin: 20px;
+	height: 130px;
 }

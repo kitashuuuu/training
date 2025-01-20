@@ -25,7 +25,8 @@ body {
 h1 {
   margin: 0;
   font-size: 34px;
-  margin-left: 540px;
+  margin-left: 530px;
+  color: #fff;
 }
 
 .container {
@@ -239,6 +240,8 @@ width: 80%;
 max-width: 400px;
 height: 450px;
 }
+
+
 
 .hidden {
   display: none;

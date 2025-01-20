@@ -35,16 +35,27 @@
             </div>
              <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image">    
           </div>
-    <h1>トレーニングログ登録確認</h1>
-    <button class="edit-btn">編集</button>
+          <h1>トレーニングログ登録確認 <span class="box1">   <button class="edit-btn">登録</button></span></h1>
     <p>こちらの内容で登録してよろしいですか？</p>
 
  
     <div class="container">
         <form>
           <div class="date-section">
-            <label for="date">2024/09/14</label>
-            <img src="calendar-icon.png" alt="カレンダー" class="calendar-icon">
+            <input type="date" id="date-picker">
+            <script>
+              // 今日の日付を取得してYYYY-MM-DD形式に変換
+              const today = new Date();
+              const yyyy = today.getFullYear();
+              const mm = String(today.getMonth() + 1).padStart(2, '0'); // 月を2桁にする
+              const dd = String(today.getDate()).padStart(2, '0'); // 日を2桁にする
+          
+              // フォーマットされた日付を設定
+              const formattedDate = `${yyyy}-${mm}-${dd}`;
+              document.getElementById('date-picker').value = formattedDate;
+            </script>
+          </div>
+  
           </div>
   
         

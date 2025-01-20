@@ -22,7 +22,7 @@ body {
   /* コンテナ */
   .container {
      display: flex;  
-    justify-content: space-around; /* 要素を等間隔に配置 */
+    /* justify-content: space-around; 要素を等間隔に配置 */
     align-items: flex-start; /* 上揃えにする */
     padding: 20px;
   }
@@ -35,11 +35,13 @@ body {
     padding: 20px;
     width: 460px;
     height: 430px;
+    margin-left: 120px;
+    margin-right: 50px;
   }
   
   .calendar h2 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 50px;
     color: #333;
   }
 
@@ -50,8 +52,8 @@ body {
     border: 1px solid #201f1f; 
     /* border-radius: 8px; */
     
-    padding: 20px;
-    width: 65%; /* 横幅を調整 */
+    padding: 10px;
+    width: 50%; /* 横幅を調整 */
     margin-bottom: 30px;
 }
   
@@ -66,19 +68,7 @@ body {
   }
   
 
-  .calendar {
-    /* background-color: #fff; */
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-left: 70px;
-  }
-  
-  .calendar h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
+ 
   
   .days {
     display: grid;
@@ -117,8 +107,9 @@ body {
   .log{
     /* display: flex; */
     flex-direction: column; /* 子要素を縦並びにする */
-    margin-left: 70px;
+    margin-left: 80px;
     gap: 20px;              /* カード間の余白 */
+    margin-right: -400px;
   }
   .log-box{
     width: 900px;
@@ -271,4 +262,10 @@ body {
     width: 100px;
     height: 140px;
    margin-top: 20px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 34px;
+    padding-top: 10px;
+    color: #fff;
   }

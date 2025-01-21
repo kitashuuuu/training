@@ -7,13 +7,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    max-height: 1000px;
   }
   
  
   h1 {
     margin: 0;
-    font-size: 18px;
+    font-size: 18x;
+    color: #f0f0f0;
   }
   
   .form-container {
@@ -27,6 +28,7 @@ body {
   
   .form-group {
     margin-bottom: 15px;
+    margin-top: 15px;
 
   }
   

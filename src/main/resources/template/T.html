@@ -16,10 +16,10 @@
               <label for="cp_toggle04"><span></span></label>
               <div class="cp_menu">
               <ul>
-              <li><a href="#">・TOP</a></li>
-              <li><a href="#">・アカウント編集</a></li>
-              <li><a href="#">・食事記録</a></li>
-              <li><a href="#">・トレログ</a></li>
+              <li><a href="../template/user_top.html">・TOP</a></li>
+              <li><a href="../template/user_accountfetch.html">・アカウント編集</a></li>
+              <li><a href="../template/alllunch.html">・食事記録</a></li>
+              <li><a href="../template/T.html">・トレログ</a></li>
               <li><a href="#" id="openPopup">・ログアウト</a></li>
         
               </ul>
@@ -40,7 +40,8 @@
           
            
             <div class="cp_contents">
-              <h1 id="id">食事記録一覧</h1>
+               <h1>食事記録一覧 <span class="box1">  <button class="edit-btn">登録</button><button class="edit-btn">編集</button></span></h1> 
+               <h1 id="id">食事記録一覧</h1>
               </div>
             </div>
           </div>
@@ -83,8 +84,9 @@
     
       <!-- トレーニング記録部分 -->
        <div class="log">
+        <h2 class="kiroku">今日のトレーニング記録</h2>
       <section class="training-log">
-        <h2>今日のトレーニング記録</h2>
+        
         <div class="log-box">
           <p>ベンチプレス 70kg 10回</p>
           <p>デッドリフト 50kg 20回</p>
@@ -93,13 +95,16 @@
           <p>有酸素運動を1時間行った</p>
         </div>
        </section>
+        <h3 class="kiroku">過去一週間の記録</h3>
        <section class="training-log">
-        <h3>過去一週間の記録</h3>
+       
         <div class="log-box">
           <p>腹筋: 30回</p>
           <p>腕立て伏せ: 100回</p>
           <p>ダンベル: 15kg 10回</p>
           <p>有酸素運動を1時間行った</p>
+          <!-- この要素を削除 -->
+
         </div>
       </section>
     </div>

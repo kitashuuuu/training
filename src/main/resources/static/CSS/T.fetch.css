@@ -25,7 +25,9 @@ body {
   h1 {
     margin: 0;
     font-size: 34px;
-    margin-left: 540px;
+    margin-left: 530px;
+    padding-top: 10px;
+    color: #fff;
   }
   
   .container {

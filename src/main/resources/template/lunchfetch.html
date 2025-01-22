@@ -20,7 +20,7 @@
           <li><a href="../template/user_accountfetch.html">・アカウント編集</a></li>
           <li><a href="../template/alllunch.html">・食事記録</a></li>
           <li><a href="../template/T.html">・トレログ</a></li>
-          <li><a href="#" id="openPopup">ログアウト</a></li>
+          <li><a href="#" id="openPopup">・ログアウト</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +42,21 @@
 
     <main>
         <section class="date-section">
-            <p>2024/09/14</p>
+          <div class="date-section">
+            <input type="date" id="date-picker">
+            <script>
+              // 今日の日付を取得してYYYY-MM-DD形式に変換
+              const today = new Date();
+              const yyyy = today.getFullYear();
+              const mm = String(today.getMonth() + 1).padStart(2, '0'); // 月を2桁にする
+              const dd = String(today.getDate()).padStart(2, '0'); // 日を2桁にする
+          
+              // フォーマットされた日付を設定
+              const formattedDate = `${yyyy}-${mm}-${dd}`;
+              document.getElementById('date-picker').value = formattedDate;
+            </script>
+          </div>
+  
             <select>
               <option value="breakfast">朝食</option>
               <option value="lunch" selected>昼食</option>

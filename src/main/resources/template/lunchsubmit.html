@@ -19,7 +19,7 @@
           <li><a href="./user_accountfetch.html">・アカウント編集</a></li>
           <li><a href="../template/alllunch.html">・食事記録</a></li>
           <li><a href="../template/T.html">・トレログ</a></li>
-          <li><a href="#" id="openPopup">ログアウト</a></li>
+          <li><a href="#" id="openPopup">・ログアウト</a></li>
           </ul>
           </div>
         </div>
@@ -33,14 +33,27 @@
              
             
             </div>
-             <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image">    
+             <img src="/src/main/resources/static/img/sports_bodybuilder_man.png" alt="左の画像" class="new-image"> 
+             <script src="../static/js/pop.js"></script>   
           </div>
-      <h1 id="it">食事記録閲覧 </h1><nav>
-     <a href="#">登録</a> <a href="#">編集</a></nav>    </div>
+      <h1>食事記録閲覧 </h1>   </div>
        
   <main>
     <section class="date-section">
-      <p>2024/09/14</p>
+      <div class="date-section">
+        <input type="date" id="date-picker">
+        <script>
+          // 今日の日付を取得してYYYY-MM-DD形式に変換
+          const today = new Date();
+          const yyyy = today.getFullYear();
+          const mm = String(today.getMonth() + 1).padStart(2, '0'); // 月を2桁にする
+          const dd = String(today.getDate()).padStart(2, '0'); // 日を2桁にする
+      
+          // フォーマットされた日付を設定
+          const formattedDate = `${yyyy}-${mm}-${dd}`;
+          document.getElementById('date-picker').value = formattedDate;
+        </script>
+      </div>
       <select>
         <option>on value="breakfast">朝食</option>
         <option value="lunch">昼食</option>

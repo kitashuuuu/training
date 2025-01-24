@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
     color: #333;
     display: flex;
     justify-content: center;
@@ -64,9 +63,8 @@ body {
     padding: 10px;
     font-size: 1rem;
     color: #161515;
-    background-color: #007bff;
+    background-color: #78b4f5;
     /* border: none; */
-    font-weight: bold;
     margin-top: 10px;
 }
 

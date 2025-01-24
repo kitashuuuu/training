@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
     color: #333;
     display: flex;
     justify-content: center;
@@ -19,8 +18,7 @@ body {
 /* ログインコンテナ */
 .login-container {
     text-align: center;
-    width: 100%;
-    max-width: 400px;
+    width: 700px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -37,6 +35,7 @@ body {
     font-size: 0.9rem;
     color: #ff4500;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /* ログインボックス */

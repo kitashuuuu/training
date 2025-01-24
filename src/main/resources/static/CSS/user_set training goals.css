@@ -7,13 +7,9 @@ body {
   }
   
   
-  .menu-button {
-    font-size: 20px;
-    color: #ffffff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+ h1{
+  text-align: center;
+ }
   
   .title {
     margin: 0;
@@ -23,10 +19,11 @@ body {
   .main-content {
     text-align: center;
     padding: 20px;
+    padding-top: 120px;
   }
   
   h2 {
-    font-size: 20px;
+    font-size: 35px;
     margin-bottom: 10px;
   }
   
@@ -36,7 +33,8 @@ body {
   }
   
   .goal-input {
-    width: 90%;
+    width: 70%;
+    height: 35px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #000000;
@@ -67,15 +65,16 @@ body {
 
 /* 各ボタンのスタイル */
 button {
-  background-color: #f2f2f2; /* ボタンの背景色 */
   color: black; /* テキストの色 */
   border: none; /* 枠線を削除 */
   padding: 10px 20px; /* 内側の余白 */
   margin: 0 10px; /* ボタン間の横の余白 */
   border-radius: 5px; /* 角を丸める */
-  font-size: 16px; /* フォントサイズ */
+  font-size: 24px; /* フォントサイズ */
   cursor: pointer; /* カーソルをポインターに変更 */
   transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -83,12 +82,12 @@ button:hover {
 }
 
   
-  .back {
+  .btn-back {
     background-color: #cccccc;
     color: #000000;
   }
   
-  .submit {
+  .btn-submit {
     background-color: #00bfff;
-    color: #ffffff;
+    color: #030303;
   }

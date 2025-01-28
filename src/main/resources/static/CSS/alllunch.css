@@ -31,7 +31,7 @@ h2{
 /* メインコンテンツ */
 .content {
   padding: 20px;
-  margin-left: 570px;
+  margin-left: 600px;
 }
 #meal-type {
   color: #131010;
@@ -76,8 +76,9 @@ option{
 
 /* 食事記録テーブル */
 .record-table table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
+  margin: auto;
 }
 
 .record-table th,
@@ -104,6 +105,9 @@ option{
   text-decoration: none;
   color: #080808;
   font-weight: bold;
+}
+.record-table a:hover{
+	color: darkturquoise;
 }
 
 .record-table a:hover {

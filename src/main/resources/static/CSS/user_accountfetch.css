@@ -28,7 +28,7 @@ body {
   
   .form-group {
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 30px;
 
   }
   
@@ -136,7 +136,7 @@ body {
     left: 0;            /* 左端に配置 */
     width: 100%;        /* 横幅を画面いっぱいに */
     text-align: center; /* コンテンツを中央揃え */
-    padding: 20px 0;    /* 上下の余白 */
+    /* padding: 20px 0;    上下の余白 */
   }
   .btn-back, .btn-submit {
     padding: 10px 20px;

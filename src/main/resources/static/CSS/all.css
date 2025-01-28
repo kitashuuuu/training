@@ -24,7 +24,7 @@
     color: #e0e0e0;
     font-size: 30px;
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 15px;
   }
   /* #id{
     margin-left: -20px;
@@ -174,7 +174,6 @@ a {
 
 .box1 {
 	border: none;
-	padding: 10px 20px;
 	margin: 0 20px 0 auto;
 	color: blue;
 	top:10px;
@@ -182,6 +181,12 @@ a {
 	position: absolute;
 	gap: 10px;
 }
+.edit-btn{
+	gap: 10px;
+	background-color: #333;
+	color: #f0f0f0;
+}
+
 
 .cp_offcm04 .cp_menu ul {
 	margin: 0;

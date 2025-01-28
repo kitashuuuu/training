@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
 }
   .date-section {
-    margin-top: 30px;
+  
     margin-bottom: 20px;
   }
   /* ファイル選択ボックス */
@@ -75,7 +75,7 @@ body {
     width: 100%;        /* 横幅を画面いっぱいに */
     text-align: center; /* コンテンツを中央揃え */
     /* padding: 20px 0;    上下の余白 */
-    height: 50px;
+    
   }
   .meal-section {
     margin: 0 auto;

@@ -56,14 +56,17 @@
       </div>
     </div>
     <div class="horizontal-container">
-      <span>ようこそ叶斗さん</span><span>現在96kg</span> <h4>目標🔥</div><span class="fire-icon"></span></h4>
+      <span id="welcome-message">ようこそ さん</span>
+      <span id="current-weight">現在 kg</span>
+
+      <h4>目標🔥</div><span class="fire-icon"></span></h4>
       <input type="text" placeholder="60Kgにムキムキになる" class="goal-input">
       
       <h3>今日のトレーニングプラン</h3>
       <div class="plan-container">
         <input type="text" placeholder="マラソン100km 腹筋100回" class="plan-input">
       </div>
-      
+
         <div class="button-container">
           <button class="action-btn" onclick="location.href='user_create%20training%20plan.html'">プラン</button>
           <button class="action-btn" onclick="location.href='user_set%20training%20goals.html'">目標設定</button>
@@ -74,15 +77,19 @@
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const user = JSON.parse(localStorage.getItem("user"));
-        if (!user) {
-            window.location.href = "/src/main/resources/template/user_login.html";
-            return;
-        }
-    
-        document.querySelector(".user-info span").textContent = `ようこそ ${user.user_id} さん`;
-        document.querySelector(".horizontal-container span:nth-child(2)").textContent = `現在 ${user.user_weight}kg`;
-    });
+      const user = JSON.parse(localStorage.getItem("user"));
+  
+      // ユーザーがログインしていない場合はログインページへリダイレクト
+      if (!user) {
+          window.location.href = "/src/main/resources/template/user_login.html";
+          return;
+      }
+  
+      // ユーザー情報をHTMLに反映
+      document.getElementById("welcome-message").textContent = `ようこそ ${user.user_id} さん`;
+      document.getElementById("current-weight").textContent = `現在 ${user.user_weight}kg`;
+  });
+  
     </script>    
 </body>
 </html>

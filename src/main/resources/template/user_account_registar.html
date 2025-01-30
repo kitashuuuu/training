@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新規登録</title>
-    <link rel="stylesheet" href="/src/main/resources/static/CSS/user_account registar.css">
+    <link rel="stylesheet" href="/src/main/resources/static/CSS/user_account_registar.css">
 </head>
 <body>
     <div class="register-container">
         <h1>新規登録（無料）</h1>
-        <form action="/register" method="post">
+        <form id="register-form">
             <div class="form-group">
                 <label for="id">ID</label>
-                <input type="text" id="id" name="id" placeholder="123456">
+                <input type="text" id="id" name="id" placeholder="ユーザーIDを入力" pattern="[\wぁ-んァ-ヶ一-龠々ー]*">
             </div>
             <div class="form-group">
                 <label for="password">パスワード</label>
@@ -26,34 +26,33 @@
                 <label for="weight">体重</label>
                 <input type="number" id="weight" name="weight" placeholder="60">
             </div>
-            <a href="/src/main/resources/template/user_top.html" class="register-button">登録</a>
+            <button type="submit" class="register-button">登録</button>
         </form>
         <a href="/src/main/resources/template/user_login.html" class="back-link">戻る</a>
     </div>
+
     <script>
-        document.querySelector(".register-button").addEventListener("click", async (e) => {
+        document.getElementById("register-form").addEventListener("submit", async (e) => {
             e.preventDefault();
-        
             const id = document.getElementById("id").value;
             const password = document.getElementById("password").value;
             const height = document.getElementById("height").value;
             const weight = document.getElementById("weight").value;
-            const goal = "目標なし";  // 初期値
-            const plan = "プランなし"; // 初期値
-        
+            const goal = "目標なし"; 
+            const plan = "プランなし"; 
+
             const response = await fetch("http://localhost:3000/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ id, password, height, weight, goal, plan })
             });
-        
+
             if (response.ok) {
                 window.location.href = "/src/main/resources/template/user_login.html";
             } else {
                 alert("登録に失敗しました");
             }
         });
-        </script>
-        
+    </script>
 </body>
 </html>

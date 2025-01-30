@@ -6,12 +6,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const db = new sqlite3.Database('./Training.db');
 
-// CORS設定
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
 
-// 新規登録API
 app.post('/register', (req, res) => {
     const { id, password, height, weight, goal, plan } = req.body;
     const entryDate = new Date().toISOString().split('T')[0];
@@ -20,30 +17,32 @@ app.post('/register', (req, res) => {
                    VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
     db.run(query, [id, password, height, weight, goal, plan, entryDate], (err) => {
-        if (err) {
-            return res.status(500).json({ error: "登録に失敗しました" });
-        }
+        if (err) return res.status(500).json({ error: "登録に失敗しました" });
         res.json({ message: "登録成功" });
     });
 });
 
-// ログインAPI
 app.post('/login', (req, res) => {
     const { id, password } = req.body;
 
     const query = `SELECT * FROM user WHERE user_id = ? AND user_pw = ?`;
-
-    db.get(query, [id, password], (err, user) => {
+    db.get(query, [id, password], (err, row) => {
         if (err) {
-            return res.status(500).json({ error: "ログインエラー" });
+            return res.status(500).json({ error: "サーバーエラー" });
         }
-        if (!user) {
+        if (!row) {
             return res.status(401).json({ error: "IDまたはパスワードが間違っています" });
         }
-        res.json(user);
+
+        res.json({
+            user_id: row.user_id,
+            user_height: row.user_height,
+            user_weight: row.user_weight,
+            user_goal: row.user_goal,
+            user_plan: row.user_plan,
+            user_entry: row.user_entry
+        });
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
-});
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));

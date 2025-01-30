@@ -23,8 +23,32 @@
                 </div>
                 <button type="submit" class="login-button">ログイン</button>
             </form>
-            <a href="/src/main/resources/template/user_account registar.html" class="register-link">新規登録</a>
+            <a href="/src/main/resources/template/user_account_registar.html" class="register-link">新規登録</a>
         </div>
     </div>
+    <script>
+        document.querySelector(".login-button").addEventListener("click", async (e) => {
+            e.preventDefault();
+        
+            const id = document.getElementById("id").value;
+            const password = document.getElementById("pw").value;
+        
+            const response = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ id, password })
+            });
+        
+            const result = await response.json();
+        
+            if (response.ok) {
+                localStorage.setItem("user", JSON.stringify(result));
+                window.location.href = "/src/main/resources/template/user_top.html";
+            } else {
+                alert("ログイン失敗");
+            }
+        });
+        </script>
+        
 </body>
 </html>

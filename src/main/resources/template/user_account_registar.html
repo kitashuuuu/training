@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規登録</title>
+    <link rel="stylesheet" href="/src/main/resources/static/CSS/user_account registar.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1>新規登録（無料）</h1>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" placeholder="123456">
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" placeholder="abcdef">
+            </div>
+            <div class="form-group">
+                <label for="height">身長</label>
+                <input type="number" id="height" name="height" placeholder="173">
+            </div>
+            <div class="form-group">
+                <label for="weight">体重</label>
+                <input type="number" id="weight" name="weight" placeholder="60">
+            </div>
+            <a href="/src/main/resources/template/user_top.html" class="register-button">登録</a>
+        </form>
+        <a href="/src/main/resources/template/user_login.html" class="back-link">戻る</a>
+    </div>
+    <script>
+        document.querySelector(".register-button").addEventListener("click", async (e) => {
+            e.preventDefault();
+        
+            const id = document.getElementById("id").value;
+            const password = document.getElementById("password").value;
+            const height = document.getElementById("height").value;
+            const weight = document.getElementById("weight").value;
+            const goal = "目標なし";  // 初期値
+            const plan = "プランなし"; // 初期値
+        
+            const response = await fetch("http://localhost:3000/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ id, password, height, weight, goal, plan })
+            });
+        
+            if (response.ok) {
+                window.location.href = "/src/main/resources/template/user_login.html";
+            } else {
+                alert("登録に失敗しました");
+            }
+        });
+        </script>
+        
+</body>
+</html>

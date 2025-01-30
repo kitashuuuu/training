@@ -64,10 +64,25 @@
         <input type="text" placeholder="マラソン100km 腹筋100回" class="plan-input">
       </div>
       
-      <div class="button-container">
+        <div class="button-container">
+          <button class="action-btn" onclick="location.href='user_create%20training%20plan.html'">プラン</button>
+          <button class="action-btn" onclick="location.href='user_set%20training%20goals.html'">目標設定</button>
+        </div>
 
       </div>
     </div>
   </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user) {
+            window.location.href = "/src/main/resources/template/user_login.html";
+            return;
+        }
+    
+        document.querySelector(".user-info span").textContent = `ようこそ ${user.user_id} さん`;
+        document.querySelector(".horizontal-container span:nth-child(2)").textContent = `現在 ${user.user_weight}kg`;
+    });
+    </script>    
 </body>
 </html>

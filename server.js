@@ -82,4 +82,22 @@ app.post('/update-plan', (req, res) => {
     });
 });
 
+
+app.post('/update-account', (req, res) => {
+    const { user_id, password, height, weight } = req.body;
+
+    if (!user_id || !password || !height || !weight) {
+        return res.status(400).json({ error: "必要なデータが不足しています" });
+    }
+
+    const query = `UPDATE user SET user_pw = ?, user_height = ?, user_weight = ? WHERE user_id = ?`;
+    db.run(query, [password, height, weight, user_id], function (err) {
+        if (err) {
+            return res.status(500).json({ error: "アカウント情報の更新に失敗しました" });
+        }
+        res.json({ message: "アカウント情報が更新されました" });
+    });
+});
+
+
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));

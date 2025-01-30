@@ -38,28 +38,82 @@
       
         <script src="/src/main/resources/static/js/pop.js"></script>
      <h1>アカウント編集</h1>
-    <form>
+     <form onsubmit="updateAccount(event)">
       <div class="form-group">
-        <label for="i">ID</label>
-        <input type="text" id="id" name="id">
+          <label for="id">ID</label>
+          <input type="text" id="id" name="id" disabled>  <!-- IDは変更不可 -->
       </div>
       <div class="form-group">
-        <label for="password">パスワード</label>
-        <input type="password" id="password" name="password">
+          <label for="password">パスワード</label>
+          <input type="password" id="password" name="password">
       </div>
       <div class="form-group">
-        <label for="height">身長</label>
-        <input type="number" id="height" name="height">
+          <label for="height">身長</label>
+          <input type="number" id="height" name="height">
       </div>
       <div class="form-group">
-        <label for="weight">体重</label>
-        <input type="number" id="weight" name="weight">
+          <label for="weight">体重</label>
+          <input type="number" id="weight" name="weight">
       </div>
       <div class="button-group">
-        <button type="button" class="btn-back">戻る</button>
-        <button type="submit" class="btn-submit">完了</button>
+          <button type="button" class="btn-back">戻る</button>
+          <button type="submit" class="btn-submit">完了</button>
       </div>
-    </form>
+  </form>
+<script> 
+  async function updateAccount(event) {
+    event.preventDefault();
+
+    try { // try を確実に追加
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user) {
+            alert("ログイン情報が見つかりません。");
+            return;
+        }
+
+        const password = document.getElementById("password").value.trim();
+        const height = document.getElementById("height").value.trim();
+        const weight = document.getElementById("weight").value.trim();
+
+        if (!password || !height || !weight) {
+            alert("すべての項目を入力してください。");
+            return;
+        }
+
+        const response = await fetch("http://localhost:3000/update-account", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+              user_id: user.user_id,
+              password,
+              height,
+              weight
+          })
+      });
+      
+
+        if (!response.ok) {
+            throw new Error(`HTTPエラー: ${response.status}`);
+        }
+
+        const data = await response.json();
+        alert("アカウント情報が更新されました！");
+
+        // ローカルストレージのデータを更新
+        user.user_pw = password;
+        user.user_height = height;
+        user.user_weight = weight;
+        localStorage.setItem("user", JSON.stringify(user));
+
+        window.location.href = "/src/main/resources/template/user_top.html";
+
+    } catch (error) { // ここでエラーをキャッチ
+        console.error("通信エラー:", error);
+        alert("通信エラーが発生しました。");
+    }
+}
+
+</script> 
   </div>
 </body>
 </html>

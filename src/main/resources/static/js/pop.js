@@ -25,6 +25,31 @@
      popup.style.display = "none";
    overlay.style.display = "none";
    });
+   document.addEventListener("DOMContentLoaded", () => {
+    const cancelButton = document.querySelector(".btn-cancel");
+    const closePopup = document.getElementById("closePopup");
+    const popup = document.getElementById("popup");
+    const openPopup = document.getElementById("openPopup");
+
+    if (openPopup) {
+        openPopup.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+    }
+
+    if (closePopup) {
+        closePopup.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    }
+
+    if (cancelButton) {
+        cancelButton.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    }
+});
+
 //   // 要素を取得
 // const openPopup = document.getElementById('openPopup');
 // const popup = document.getElementById('popup');

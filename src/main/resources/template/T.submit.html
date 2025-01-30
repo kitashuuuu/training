@@ -148,6 +148,14 @@
         <button type="button" class="back-btn">戻る</button>
         <button type="submit" class="submit-btn">登録</button>
       </div>
-    
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 戻るボタンの処理
+            document.querySelector(".back-btn").addEventListener("click", function() {
+                window.location.href = "/src/main/resources/template/T.html";
+            });
+        });
+      </script>
+      
 </body>
 </html>

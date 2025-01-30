@@ -38,7 +38,7 @@
     </div>
 
     <script src="/src/main/resources/static/js/pop.js"></script>
-    <h1>食事記録編集<span class="box1">  <button class="edit-btn">登録</button></span></h1>
+    <h1>食事記録編集<span class="box1">    <button class="edit-btn" id="registerBtn">登録</button></span></h1>
 
     <main>
         <section class="date-section">
@@ -95,8 +95,18 @@
         </div>
       </section>
       <div class="button-group">
-        <button class="btn-back">戻る</button>
+        <button class="btn-back" id="backBtn">戻る</button>
         <button class="btn-submit">登録</button>
     </div>   
     </body>
+    <script>
+    document.getElementById("registerBtn").addEventListener("click", () => {
+      window.location.href = "/src/main/resources/template/lunchsubmit.html";
+  });
+
+        document.getElementById("backBtn").addEventListener("click", () => {
+        window.location.href = "/src/main/resources/template/alllunch.html";
+    });
+  </script>
+
 </html>

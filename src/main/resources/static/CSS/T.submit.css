@@ -44,8 +44,16 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 50px; /* 20px → 50px に変更（調整可） */
+  padding-top: 30px; /* さらに上の余白を増やす */
 }
+
+select {
+  margin-top: 20px; /* 朝昼晩の選択の位置を下に調整 */
+  padding: 8px;
+  font-size: 16px;
+}
+
 
 .calendar-icon {
   width: 20px;

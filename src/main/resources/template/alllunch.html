@@ -40,7 +40,8 @@
   
     <script src="/src/main/resources/static/js/pop.js"></script>
     <div class="cp_contents">
-      <h1>食事記録一覧<span class="box1">  <button class="edit-btn">登録</button><button class="edit-btn">編集</button></span></h1>
+      <h1>食事記録一覧<span class="box1">   <button class="edit-btn" id="registerBtn">登録</button>
+        <button class="edit-btn" id="editBtn">編集</button></span></h1>
       </div>
     </div>
   </div>
@@ -153,6 +154,18 @@
       </tbody>
     </table>
   </section>
+
+
+<script>
+    document.getElementById("registerBtn").addEventListener("click", () => {
+        window.location.href = "/src/main/resources/template/lunchsubmit.html";
+    });
+
+    document.getElementById("editBtn").addEventListener("click", () => {
+        window.location.href = "/src/main/resources/template/lunchfetch.html";
+    });
+</script>
+
 
 
 </body>

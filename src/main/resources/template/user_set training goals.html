@@ -54,4 +54,47 @@
       </main>
 
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+        window.location.href = "/src/main/resources/template/user_login.html";
+        return;
+    }
+
+    document.querySelector(".btn-submit").addEventListener("click", async () => {
+        const goalInput = document.querySelector(".goal-input").value.trim();
+
+        if (!goalInput) {
+            alert("目標を入力してください！");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost:3000/update-goal", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_id: user.user_id, user_goal: goalInput })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTPエラー: ${response.status}`);
+            }
+
+            const data = await response.json();
+            alert("目標が更新されました！");
+            user.user_goal = goalInput;
+            localStorage.setItem("user", JSON.stringify(user));
+            window.location.href = "/src/main/resources/template/user_top.html";
+        } catch (error) {
+            console.error("通信エラー:", error);
+            alert("通信エラーが発生しました。");
+        }
+    });
+});
+
+
+  </script>
+  
 </html>

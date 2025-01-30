@@ -77,19 +77,29 @@
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const user = JSON.parse(localStorage.getItem("user"));
-  
-      // ユーザーがログインしていない場合はログインページへリダイレクト
-      if (!user) {
-          window.location.href = "/src/main/resources/template/user_login.html";
-          return;
-      }
-  
-      // ユーザー情報をHTMLに反映
-      document.getElementById("welcome-message").textContent = `ようこそ ${user.user_id} さん`;
-      document.getElementById("current-weight").textContent = `現在 ${user.user_weight}kg`;
-  });
-  
-    </script>    
+        try {
+            const user = JSON.parse(localStorage.getItem("user"));
+    
+            if (!user) {
+                window.location.href = "/src/main/resources/template/user_login.html";
+                return;
+            }
+    
+            document.getElementById("welcome-message").textContent = `ようこそ ${user.user_id} さん`;
+            document.getElementById("current-weight").textContent = `現在 ${user.user_weight}kg`;
+    
+            const goalElement = document.querySelector(".goal-input");
+            if (user.user_goal) {
+                goalElement.value = user.user_goal;
+            } else {
+                goalElement.placeholder = "ここに目標を入力してください";
+            }
+        } catch (error) {
+            console.error("ユーザーデータの取得に失敗しました:", error);
+            window.location.href = "/src/main/resources/template/user_login.html";
+        }
+    });
+    </script>
+     
 </body>
 </html>

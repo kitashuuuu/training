@@ -9,6 +9,7 @@ const db = new sqlite3.Database('./Training.db');
 app.use(cors());
 app.use(bodyParser.json());
 
+// ユーザー登録API（変更なし）
 app.post('/register', (req, res) => {
     const { id, password, height, weight, goal, plan } = req.body;
     const entryDate = new Date().toISOString().split('T')[0];
@@ -22,6 +23,7 @@ app.post('/register', (req, res) => {
     });
 });
 
+// ログインAPI（変更なし）
 app.post('/login', (req, res) => {
     const { id, password } = req.body;
 
@@ -42,6 +44,23 @@ app.post('/login', (req, res) => {
             user_plan: row.user_plan,
             user_entry: row.user_entry
         });
+    });
+});
+
+// 目標更新API（新規追加）
+app.post('/update-goal', (req, res) => {
+    const { user_id, user_goal } = req.body;
+
+    if (!user_id || !user_goal) {
+        return res.status(400).json({ error: "必要なデータが不足しています" });
+    }
+
+    const query = `UPDATE user SET user_goal = ? WHERE user_id = ?`;
+    db.run(query, [user_goal, user_id], function (err) {
+        if (err) {
+            return res.status(500).json({ error: "目標の更新に失敗しました" });
+        }
+        res.json({ message: "目標が更新されました" });
     });
 });
 

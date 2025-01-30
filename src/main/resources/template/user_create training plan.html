@@ -39,7 +39,7 @@
       </div>
     <main>
         <h2>今日の筋トレプランを設定しよう！</h2>
-        <input type="text" placeholder="プランを入力">
+        <input type="text" class="plan-input" placeholder="プランを入力">
         <ul>
             <li>腹筋10回 7kcal ・ 腕立て10回 4.8kcal</li>
             <li>腹筋10回 6.4kcal ・ 1km走る 体重×1kcal</li>
@@ -49,5 +49,47 @@
         <button class="btn-submit">登録</button>
     </div>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const user = JSON.parse(localStorage.getItem("user"));
+        
+            if (!user) {
+                window.location.href = "/src/main/resources/template/user_login.html";
+                return;
+            }
+        
+            document.querySelector(".btn-submit").addEventListener("click", async () => {
+                const planInput = document.querySelector(".plan-input").value.trim();
+        
+                if (!planInput) {
+                    alert("トレーニングプランを入力してください！");
+                    return;
+                }
+        
+                try {
+                    const response = await fetch("http://localhost:3000/update-plan", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ user_id: user.user_id, user_plan: planInput })
+                    });
+        
+                    if (!response.ok) {
+                        throw new Error(`HTTPエラー: ${response.status}`);
+                    }
+        
+                    const data = await response.json();
+                    alert("トレーニングプランが更新されました！");
+                    user.user_plan = planInput;
+                    localStorage.setItem("user", JSON.stringify(user));
+                    window.location.href = "/src/main/resources/template/user_top.html";
+                } catch (error) {
+                    console.error("通信エラー:", error);
+                    alert("通信エラーが発生しました。");
+                }
+            });
+        });
+        
+        </script>
+        
 </body>
 </html>

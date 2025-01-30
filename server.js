@@ -64,4 +64,22 @@ app.post('/update-goal', (req, res) => {
     });
 });
 
+
+// トレーニングプラン更新API（新規追加）
+app.post('/update-plan', (req, res) => {
+    const { user_id, user_plan } = req.body;
+
+    if (!user_id || !user_plan) {
+        return res.status(400).json({ error: "必要なデータが不足しています" });
+    }
+
+    const query = `UPDATE user SET user_plan = ? WHERE user_id = ?`;
+    db.run(query, [user_plan, user_id], function (err) {
+        if (err) {
+            return res.status(500).json({ error: "トレーニングプランの更新に失敗しました" });
+        }
+        res.json({ message: "トレーニングプランが更新されました" });
+    });
+});
+
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));

@@ -63,8 +63,8 @@
       <input type="text" placeholder="60Kgにムキムキになる" class="goal-input">
       
       <h3>今日のトレーニングプラン</h3>
+      <input type="text" placeholder="マラソン100km 腹筋100回" class="plan-input">
       <div class="plan-container">
-        <input type="text" placeholder="マラソン100km 腹筋100回" class="plan-input">
       </div>
 
         <div class="button-container">
@@ -88,11 +88,20 @@
             document.getElementById("welcome-message").textContent = `ようこそ ${user.user_id} さん`;
             document.getElementById("current-weight").textContent = `現在 ${user.user_weight}kg`;
     
+            // 目標を表示
             const goalElement = document.querySelector(".goal-input");
             if (user.user_goal) {
                 goalElement.value = user.user_goal;
             } else {
                 goalElement.placeholder = "ここに目標を入力してください";
+            }
+    
+            // トレーニングプランを表示
+            const planElement = document.querySelector(".plan-input");
+            if (user.user_plan) {
+                planElement.value = user.user_plan;
+            } else {
+                planElement.placeholder = "ここにプランを入力してください";
             }
         } catch (error) {
             console.error("ユーザーデータの取得に失敗しました:", error);
@@ -100,6 +109,7 @@
         }
     });
     </script>
+    
      
 </body>
 </html>

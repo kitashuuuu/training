@@ -15,9 +15,7 @@
 	font-size: 20px; /* ラベルのフォントサイズを大きくする */
 	margin-right: 5px; /* ラベルと入力フィールドの間隔を調整 */
   }
-  .button-group{
-    margin-right: 40px;
-  }
+  
   /* .date-section {
     display: flex;
     align-items: center;
@@ -110,7 +108,7 @@
   } 
   /*メニュー終わり*/
 .meal-section {
-    display: flex;
+    
     align-items: flex-start;
     margin: 20px 0;
     padding: 20px;
@@ -120,12 +118,11 @@
     margin-bottom: 20px;
   }
   .file-upload-box {
-    display: flex;
     flex-direction: column;
     width: 45%;
     align-items: center;
     margin-top: -15px;
-    margin-left: 50px;
+    margin-left: 350px;
     
   }
   .file-upload-box .im{
@@ -135,7 +132,8 @@
   }
   .content {
     width: 40%;
-    height: 100px;
+    height: 300px;
+    margin-left: 400px;
   }
   table {
     width: 100%;
@@ -181,6 +179,8 @@
     border-radius: 30px;
     font-weight: bold;
   }
+
+
   .btn-submit{
     background-color: aqua;
     margin-left: 50px;

@@ -24,7 +24,7 @@ body {
   h2 {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-left: px;
   }
 .nav{
     color: #f0f3f0;
@@ -79,7 +79,7 @@ body {
   }
   .meal-section {
     margin: 0 auto;
-    width: 500px;
+    width: 1200px;
     padding: 20px;
     border-radius: 10px;
     margin-top: -10px;
@@ -116,7 +116,7 @@ body {
     display: flex;
   }
 .button-group{
-  margin-right: 30px;
+  margin-top: 500px;
 }
 .btn-back, .btn-submit {
   padding: 10px 20px;

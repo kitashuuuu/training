@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
   <link rel="stylesheet" href="/src/main/resources/static/CSS/lunchfetch.css">
   <link rel="stylesheet" href="../static/CSS/all.css">
 </head>
+
 <body>
-<div class="cp_cont">
+  <div class="cp_cont">
     <!-- サイドメニュー -->
     <div class="cp_offcm04">
       <input type="checkbox" id="cp_toggle04">
@@ -38,40 +40,39 @@
     </div>
 
     <script src="/src/main/resources/static/js/pop.js"></script>
-    <h1>食事記録編集<span class="box1">    <button class="edit-btn" id="registerBtn">登録</button></span></h1>
+    <h1>食事記録編集<span class="box1"> <button class="edit-btn" id="registerBtn">登録</button></span></h1>
 
     <main>
-        <section class="date-section">
-          <div class="date-section">
-            <input type="date" id="date-picker">
-            <script>
-              // 今日の日付を取得してYYYY-MM-DD形式に変換
-              const today = new Date();
-              const yyyy = today.getFullYear();
-              const mm = String(today.getMonth() + 1).padStart(2, '0'); // 月を2桁にする
-              const dd = String(today.getDate()).padStart(2, '0'); // 日を2桁にする
-          
-              // フォーマットされた日付を設定
-              const formattedDate = `${yyyy}-${mm}-${dd}`;
-              document.getElementById('date-picker').value = formattedDate;
-            </script>
-          </div>
-  
-            <select>
-              <option value="breakfast">朝食</option>
-              <option value="lunch" selected>昼食</option>
-              <option value="dinner">夕食</option>
-            </select>
-          </section>
-       <!-- セクション: 編集内容 -->
-    <section class="meal-section">
+      <section class="date-section">
+        <div class="date-section">
+          <input type="date" id="date-picker">
+          <script>
+            // 今日の日付を取得してYYYY-MM-DD形式に変換
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0'); // 月を2桁にする
+            const dd = String(today.getDate()).padStart(2, '0'); // 日を2桁にする
+
+            // フォーマットされた日付を設定
+            const formattedDate = `${yyyy}-${mm}-${dd}`;
+            document.getElementById('date-picker').value = formattedDate;
+          </script>
+        </div>
+
+        <select>
+          <option value="breakfast">朝食</option>
+          <option value="lunch" selected>昼食</option>
+          <option value="dinner">夕食</option>
+        </select>
+      </section>
+      <!-- セクション: 編集内容 -->
+      <section class="meal-section">
         <!-- 左側: タイトルと画像 -->
         <div class="file-upload-box">
-          <h2 contenteditable="true">🖊  ナスとレンコンと豚肉の甘酢炒め</h2>
-        <img class="im" src="../static/img/images (3).jpg" alt="ナスとレンコンと豚肉の甘酢炒め">
-         
+          <h2 contenteditable="true">🖊 ナスとレンコンと豚肉の甘酢炒め</h2>
+
         </div>
-  
+
         <!-- 右側: 編集可能なテーブル -->
         <div class="content">
           <table>
@@ -97,16 +98,16 @@
       <div class="button-group">
         <button class="btn-back" id="backBtn">戻る</button>
         <button class="btn-submit">登録</button>
-    </div>   
-    </body>
-    <script>
-    document.getElementById("registerBtn").addEventListener("click", () => {
-      window.location.href = "/src/main/resources/template/lunchsubmit.html";
+      </div>
+</body>
+<script>
+  document.getElementById("registerBtn").addEventListener("click", () => {
+    window.location.href = "/src/main/resources/template/lunchsubmit.html";
   });
 
-        document.getElementById("backBtn").addEventListener("click", () => {
-        window.location.href = "/src/main/resources/template/alllunch.html";
-    });
-  </script>
+  document.getElementById("backBtn").addEventListener("click", () => {
+    window.location.href = "/src/main/resources/template/alllunch.html";
+  });
+</script>
 
 </html>

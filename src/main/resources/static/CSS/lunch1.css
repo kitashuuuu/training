@@ -108,9 +108,6 @@ body {
   .date-section select {
     padding: 5px; /* プルダウンメニューの見た目を調整 */
   }
-  h2{
-    margin-right: 400px;
-  }
   nav{
     font-size: 16px;
   }

@@ -279,3 +279,40 @@ body {
 .kiroku{
   font-size: 28px;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between; /* 左右配置 */
+  align-items: center; /* 上下中央配置 */
+  padding: 1px;
+  gap: 20px;
+}
+
+/* Monthly Archive を左側の中央に配置 */
+.monthly-archive {
+  flex: 1;
+  display: flex;
+  align-items: center; /* 縦方向中央 */
+  justify-content: center; /* 横方向中央 */
+  height: 100%; /* 高さを確保 */
+}
+
+/* Monthly Archive を大きくする */
+.archive-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px 40px; /* 内側の余白を増やす */
+  width: 200px; /* 幅を調整 */
+  height: 150px; /* 高さを調整 */
+  font-size: 24px; /* フォントサイズを大きく */
+  background-color: #f0f0f0; /* 背景色を追加（見やすくするため） */
+}
+
+.archive-title {
+  font-size: 28px; /* タイトルを大きく */
+}
+
+.archive-days {
+  font-size: 32px; /* 日数の数字を大きく */
+}

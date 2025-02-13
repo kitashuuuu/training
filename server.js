@@ -23,6 +23,7 @@ app.post('/register', (req, res) => {
     });
 });
 
+
 // ログインAPI（変更なし）
 app.post('/login', (req, res) => {
     const { id, password } = req.body;

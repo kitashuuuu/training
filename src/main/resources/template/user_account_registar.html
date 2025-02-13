@@ -41,7 +41,7 @@
             const goal = "目標なし"; 
             const plan = "プランなし"; 
 
-            const response = await fetch("http://localhost:3000/register", {
+            const response = await fetch("http://160.251.170.148/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ id, password, height, weight, goal, plan })

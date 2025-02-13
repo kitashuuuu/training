@@ -32,8 +32,8 @@ body {
     justify-content: space-between;
 }
   .date-section {
-  
-    margin-bottom: 20px;
+    margin-top: 70px
+
   }
   /* ファイル選択ボックス */
   .file-upload-box {

@@ -99,6 +99,57 @@
             window.location.href = "/src/main/resources/template/T.fetch.html";
         });
     });
+    document.addEventListener("DOMContentLoaded", async function() {
+        // ログインしているユーザーのデータを取得
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user) {
+            const userEntryDate = user.user_entry; // ユーザーの登録日
+            const daysSinceEntry = calculateDaysSince(userEntryDate);
+
+            // 月次アーカイブに表示
+            document.querySelector(".archive-days").innerHTML = `${daysSinceEntry} <span>days</span>`;
+        }
+    });
+
+    // 日付から現在までの日数を計算する関数
+    function calculateDaysSince(entryDate) {
+        const currentDate = new Date();
+        const entryDateObj = new Date(entryDate);
+        
+        // ミリ秒単位で差を計算し、日数に変換
+        const timeDifference = currentDate - entryDateObj;
+        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+        
+        return daysDifference;
+    }
+    document.addEventListener("DOMContentLoaded", async function() {
+        // ローカルストレージからユーザー情報を取得
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user) {
+            const userId = user.user_id;
+    
+            // サーバーからトレーニングデータを取得
+            const response = await fetch(`/get-training/${userId}`);
+            const trainingData = await response.json();
+    
+            // 今日のトレーニング記録にデータを表示
+            const todayTrainingLog = document.querySelector(".training-log .log-box");
+            trainingData.forEach(training => {
+                const trainingRecord = document.createElement("p");
+                trainingRecord.textContent = `${training.t_name} ${training.kg}kg ${training.t_number}回`;
+                todayTrainingLog.appendChild(trainingRecord);
+            });
+    
+            // 過去一週間のトレーニング記録にデータを表示
+            const pastWeekLog = document.querySelector(".training-log .log-box");
+            trainingData.forEach(training => {
+                const trainingRecord = document.createElement("p");
+                trainingRecord.textContent = `${training.t_name} ${training.kg}kg ${training.t_number}回`;
+                pastWeekLog.appendChild(trainingRecord);
+            });
+        }
+    });
+    
   </script>
   
 </body>
